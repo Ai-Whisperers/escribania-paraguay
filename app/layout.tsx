@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { Playfair_Display, Lora, Inter } from "next/font/google"
 import "./globals.css"
+import { CookieConsent } from "@ai-whisperers/seo"
+import { WhatsAppFloat } from "@ai-whisperers/whatsapp"
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -54,6 +56,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-screen flex flex-col">
         {children}
+      
+        <WhatsAppFloat />
+        <CookieConsent />
       </body>
     </html>
   )
